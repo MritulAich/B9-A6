@@ -1,48 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evocative Forum</title>
-<link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-<style>
-    * {
-  font-family: "Mulish", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-</style>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: "Mulish", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
+        }
+    </style>
 </head>
+
 <body>
     <header class="mx-32">
-            <nav class="flex flex-row justify-between my-14">
-                <h3 class="text-4xl font-black">Evocative</h3>
-                <div class="space-x-3">
-                    <div class="tooltip" data-tip="Home">
-                        <button class="btn rounded-full"><img src="./icons/home.svg" ></button>
-                    </div>
-                    <div class="tooltip" data-tip="Tooltip">
-                        <button class="btn rounded-full"><img src="./icons/pen.svg" ></button>
-                    </div>
-                    <div class="tooltip" data-tip="Sign Up">
-                        <button class="btn rounded-full"><img src="./icons/user.svg" ></button>
-                    </div>
-                    <div class="tooltip" data-tip="Issue">
-                        <button class="btn rounded-full"><img src="./icons/flag.svg" ></button>
-                    </div>
-                    <button class="btn btn-primary rounded-3xl px-8 py-3">Sign In</button>
+        <nav class="flex flex-row justify-between my-14">
+            <h3 class="text-4xl font-black">Evocative</h3>
+            <div class="space-x-3">
+                <div class="tooltip" data-tip="Home">
+                    <button class="btn rounded-full"><img src="./icons/home.svg"></button>
                 </div>
-            </nav>
-            
+                <div class="tooltip" data-tip="Tooltip">
+                    <button class="btn rounded-full"><img src="./icons/pen.svg"></button>
+                </div>
+                <div class="tooltip" data-tip="Sign Up">
+                    <button class="btn rounded-full"><img src="./icons/user.svg"></button>
+                </div>
+                <div class="tooltip" data-tip="Issue">
+                    <button class="btn rounded-full"><img src="./icons/flag.svg"></button>
+                </div>
+                <button class="btn btn-primary rounded-3xl px-8 py-3">Sign In</button>
+            </div>
+        </nav>
+
+        <!-- banner part -->
+        <div class="hero p-24 rounded-3xl bg-[#12132D] flex flex-row justify-around" style="background-image: url('./images/bgbanner.png')">
+            <div>
+                <h1 class="mb-5 text-6xl font-black text-white leading-[70px]">Welcome to the <br><span
+                        class="text-[#797DFC]">Evocative</span> Forum</h1>
+                <p class="mb-5 text-white text-opacity-80">Share your favorite opinion and win and wp <br>forum coffee
+                    mug!</p>
+                <input id="search" type="text" placeholder="Search here anything"
+                    class="input input-bordered rounded-3xl w-full max-w-xs relative" />
+                <button onclick="searchBtn()"
+                    class="btn btn-primary rounded-3xl px-4 absolute ml-[-90px]">Search</button>
+            </div>
+            <div class="bg-white rounded-3xl p-10 space-y-4">
+                <div class="flex flex-row justify-between"><p class="mr-10">Registered Users</p><p>01</p></div>
+                <div class="flex flex-row justify-between"><p>Forum</p><p>05</p></div>
+                <div class="flex flex-row justify-between"><p>Topics</p><p>01</p></div>
+                <div class="flex flex-row justify-between"><p>Replies</p><p>03</p></div>
+            </div>
+        </div>
     </header>
     <main class="mx-32">
 
     </main>
     <script src="./script.js"></script>
 </body>
+
 </html>
