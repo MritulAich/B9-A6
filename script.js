@@ -5,13 +5,13 @@ const allPosts = async () => {
     const postsContainer = document.getElementById('all-posts');
     data.posts.forEach(post => {
         const div2 = document.createElement("div");
-        div2.innerHTML = `<div class="flex flex-row p-10 mb-6 bg-[#F3F3F5] rounded-3xl gap-6 w-[800px]">
+        div2.innerHTML = `<div class="flex flex-row lg:p-10 p-5 mb-6 bg-[#F3F3F5] rounded-3xl gap-6 lg:w-[800px]">
         <div class="indicator">
             <span class="indicator-item badge bg-[green]">${post.isActive ? '' : 'false'}</span>
             <div class="grid w-28 h-28 place-items-center"><img src="${post.image}" class="rounded-2xl">
             </div>
         </div>
-        <div class="space-y-4">
+        <div class="lg:space-y-4 space-y-2">
             <div class="flex flex-row gap-5">
                 <p>#${post.category}</p>
                 <p>Author: ${post.author.name}</p>
@@ -20,7 +20,7 @@ const allPosts = async () => {
             <p>${post.description}</p>
             <hr class="border border-dashed">
             <div class="flex flex-row justify-between">
-                <div class="flex flex-row gap-6">
+                <div class="flex lg:flex-row flex-col lg:gap-6">
                     <div class="flex flex-row gap-3 "><img src="./icons/tabler-icon-message-2.svg">${post.comment_count}</div>
                     <div class="flex flex-row gap-3"><img src="./icons/tabler-icon-eye.svg">${post.view_count}</div>
                     <div class="flex flex-row gap-3"><img src="./icons/tabler-icon-clock-hour-9.svg">${post.posted_time}</div>
@@ -47,7 +47,7 @@ function markBtn() {
     currentRead.innerText = newReadAdded;
 
     const div3 = document.createElement("div");
-    div3.innerHTML = `<div class="p-4 gap-8 mb-6 flex flex-row bg-white rounded-2xl justify-between">
+    div3.innerHTML = `<div class="p-4 lg:gap-8 lg:mb-6 mb-3 flex flex-row bg-white rounded-2xl justify-between">
     <p class="font-semibold">10 Kids Unaware of Their Costume</p>
     <div class="flex flex-row gap-2"><img src="/icons/tabler-icon-eye.svg"><p>5</p></div>
     </div>`;

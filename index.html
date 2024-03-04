@@ -22,35 +22,35 @@
 </head>
 
 <body>
-    <header class="mx-32">
+    <header class="lg:mx-32 mx-10">
         <nav class="flex flex-row justify-between my-14">
             <h3 class="text-4xl font-black">Evocative</h3>
             <div class="space-x-3">
                 <div class="tooltip" data-tip="Home">
-                    <button class="btn rounded-full"><img src="./icons/home.svg"></button>
+                    <button class="btn rounded-full sm:block hidden"><img src="./icons/home.svg"></button>
                 </div>
                 <div class="tooltip" data-tip="Write">
-                    <button class="btn rounded-full"><img src="./icons/pen.svg"></button>
+                    <button class="btn rounded-full sm:block hidden"><img src="./icons/pen.svg"></button>
                 </div>
                 <div class="tooltip" data-tip="Add">
-                    <button class="btn rounded-full"><img src="./icons/user.svg"></button>
+                    <button class="btn rounded-full sm:block hidden"><img src="./icons/user.svg"></button>
                 </div>
                 <div class="tooltip" data-tip="Issue">
-                    <button class="btn rounded-full"><img src="./icons/flag.svg"></button>
+                    <button class="btn rounded-full sm:block hidden"><img src="./icons/flag.svg"></button>
                 </div>
                 <button class="btn btn-primary rounded-3xl px-8 py-3">Sign In</button>
             </div>
         </nav>
 
         <!-- banner part -->
-        <div class="hero p-24 rounded-3xl bg-[#12132D] flex flex-row justify-around"
+        <div class="hero lg:p-24 p-6 rounded-3xl bg-[#12132D] flex lg:flex-row flex-col justify-around"
             style="background-image: url('./images/bgbanner.png')">
             <div>
-                <h1 class="mb-5 text-6xl font-black text-white leading-[70px]">Welcome to the <br><span
+                <h1 class="lg:mb-5 mb-2 lg:text-6xl text-4xl font-black text-white lg:leading-[70px] leading-10">Welcome to the <br><span
                         class="text-[#797DFC]">Evocative</span> Forum</h1>
                 <p class="mb-5 text-white text-opacity-80">Share your favorite opinion and win and wp <br>forum coffee
                     mug!</p>
-                <label class="input input-bordered flex items-center gap-2 rounded-3xl">
+                <label class="input input-bordered flex items-center gap-2 rounded-3xl mb-5">
                     <input id="search" type="text" class="grow" placeholder="Search here anything" />
                     <button onclick="searchBtn()" class="badge badge-info text-white p-4">Search</button>
                 </label>
@@ -75,7 +75,7 @@
             </div>
         </div>
     </header>
-    <main class="mx-32">
+    <main class="lg:mx-32 mx-8">
 
 
         <!-- Discuss -->
@@ -84,16 +84,16 @@
                 <span class="loading loading-bars loading-lg"></span>
             </div>
 
-            <h3 class="mt-16 mb-6 text-[#12132D] text-4xl font-black text-center">Let's Discuss</h3>
+            <h3 class="mt-16 mb-6 text-[#12132D] lg:text-4xl text-2xl font-black text-center">Let's Discuss</h3>
             <p class="mb-12 text-[#12132D] opacity-60 text-center">
                 Engage in informed debates on pressing issues. Share perspectives, insights, and opinions <br>with our
                 diverse community in our discussion section</p>
 
-            <div class="flex flex-row">
+            <div class="flex lg:flex-row flex-col">
 
                 <div id="all-posts"> </div>
 
-                <div class="bg-[#12132D] bg-opacity-5 ml-10 rounded-3xl p-6">
+                <div class="bg-[#12132D] bg-opacity-5 lg:ml-10 lg:mt-0 mt-4 rounded-3xl p-6">
                     <div class="flex flex-row justify-between mb-5">
                         <h3 class="font-bold text-xl">Title</h3>
                         <p>Mark as read (<span id='mark-read'>0</span>)</p>
@@ -105,33 +105,33 @@
 
 
         <!-- Join Forum -->
-        <section class="flex flex-row bg-[#12132D] rounded-3xl justify-evenly mt-24">
-            <div class="text-white m-24 mr-0">
+        <section class="flex lg:flex-row flex-col bg-[#12132D] rounded-3xl justify-evenly mt-12 lg:mt-24">
+            <div class="text-white lg:m-24 m-10 lg:mr-0">
                 <h1 class="font-black text-4xl pb-4">Join Our Forum</h1>
                 <p class="opacity-70">Share your favorite opinion and win and wp forum coffee mug! Yes, you can <br>run
                     unit tests and view the results directly within the app.</p>
                 <button class="btn btn-info rounded-3xl mt-8 text-white">Registered Now</button>
             </div>
-            <div><img class="mt-10" src="./images/joinforum.png"></div>
+            <div><img class="lg:mt-10 m-4" src="./images/joinforum.png"></div>
         </section>
 
 
         <!-- Latest posts -->
         <section>
-            <h3 class="mt-24 mb-6 text-[#12132D] text-4xl font-black text-center">Latest Posts</h3>
+            <h3 class="mt-24 mb-4 lg:mb-6 text-[#12132D] text-4xl font-black text-center">Latest Posts</h3>
             <p class="mb-12 text-[#12132D] opacity-60 text-center">Here you can discover some unknown truths written by
                 our 3 famous science <br>journalist. Comment and share after reading.</p>
 
-            <div id="latest-post" class="flex flex-row gap-6 justify-evenly"></div>
+            <div id="latest-post" class="flex lg:flex-row flex-col gap-6 justify-evenly"></div>
         </section>
 
     </main>
-    <footer class="footer footer-center p-24 mt-24 bg-base-200 text-base-content rounded">
-        <div class="space-y-8">
-            <nav class="text-4xl text-[#12132D] font-black">Evocative</nav>
+    <footer class="footer footer-center lg:p-20 p-10 mt-24 bg-base-200 text-base-content rounded">
+        <div class="lg:space-y-8 space-y-4">
+            <nav class="lg:text-4xl text-2xl text-[#12132D] font-black">Evocative Forum</nav>
             <p>How was your journey with Evocative Forum? Don't forget to send your experience and reaction. <br>Follow
                 for
-                regular posts and subscribe our newsletter.</p>
+                regular posts and <button>subscribe</button> our newsletter.</p>
             <img src="./icons/social.svg">
             <img src="./icons/line 2.svg">
             <p>2017, All Rights Reserved.</p>
