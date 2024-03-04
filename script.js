@@ -1,13 +1,13 @@
 const allPosts = async () => {
     const response = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
     const data = await response.json();
-    console.log(data);
+
     const postsContainer = document.getElementById('all-posts');
     data.posts.forEach(post => {
         const div2 = document.createElement("div");
         div2.innerHTML = `<div class="flex flex-row p-10 mb-6 bg-[#F3F3F5] rounded-3xl gap-6 w-[800px]">
         <div class="indicator">
-            <span class="indicator-item badge bg-[green]">${post.isActive? '' : 'false'}</span>
+            <span class="indicator-item badge bg-[green]">${post.isActive ? '' : 'false'}</span>
             <div class="grid w-28 h-28 place-items-center"><img src="${post.image}" class="rounded-2xl">
             </div>
         </div>
@@ -30,7 +30,8 @@ const allPosts = async () => {
         </div>
     </div>`;
         postsContainer.appendChild(div2);
-    })
+    });
+
 }
 allPosts();
 
@@ -59,8 +60,8 @@ const latestPosts = async () => {
 
     const latestContainer = document.getElementById("latest-post");
     data.forEach(post => {
-       const div4 = document.createElement('div');
-       div4.innerHTML = `<div
+        const div4 = document.createElement('div');
+        div4.innerHTML = `<div
        class="card w-96 p-6 space-y-3 bg-base-100 border-[1px] border-solid border-[#12132D] border-opacity-15">
        <img src="${post.cover_image} class="px-10" />
        <div class="flex flex-row gap-2"><img src="./icons/calender.svg">${post.author.posted_date ? post.author.posted_date : 'No publish date'}</div>
@@ -74,8 +75,16 @@ const latestPosts = async () => {
            </div>
         </div>
         </div>`;
-       latestContainer.appendChild(div4);
+        latestContainer.appendChild(div4);
     })
 
 }
-latestPosts()
+latestPosts();
+
+
+function searchBtn() {
+    const spinner = document.getElementById('spinner');
+        setTimeout(() => {
+            spinner.classList.remove('hidden')
+        }, 2000)
+}
